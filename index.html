@@ -1,0 +1,143 @@
+<!-- HTML FILE (index.html) -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hannah Pujari — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="sparkles" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <div class="logo-mark">HP</div>
+        <div>
+          <h1>Hannah Pujari</h1>
+          <p>Computer Engineering • Student</p>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header id="home" class="hero">
+      <div class="hero-left">
+        <div class="eyebrow">Hello — I'm</div>
+        <h2 class="title">Hannah Pujari</h2>
+        <p class="lead">A first-year computer engineering student passionate about building web experiences, writing clean code, and learning full-stack development.</p>
+
+        <div class="cta-row">
+          <a class="btn" href="resume.pdf" download>Download Resume</a>
+          <a class="btn-secondary" href="#projects">See Projects</a>
+        </div>
+
+        <p class="muted extra">Currently learning: JavaScript, React, Node.js • Open to internships and collaborations.</p>
+      </div>
+
+      <aside class="hero-card">
+        <div class="profile">
+          <img src="image.jpg" alt="Hannah Pujari">
+        </div>
+        <h3>Hannah P.</h3>
+        <p class="muted small">First-year Computer Engineering student</p>
+
+        <div class="social-row">
+          <a class="btn-secondary" href="#contact">Contact</a>
+          <!-- <a class="btn-secondary" href="https://www.linkedin.com" target="_blank">LinkedIn</a> -->
+        </div>
+      </aside>
+    </header>
+
+    <section id="about">
+      <div class="card">
+        <h3>About me</h3>
+        <p class="muted"> Hello! I'm Hannah Pujari, I enjoy exploring the world of coding and have been diving deep into languages like Python, JavaScript, and C++ to build efficient and creative solutions." <br>
+		I’m continuously expanding my skills in software development, web technologies, and modern engineering tools. In my free time, you'll find me reading, listening to music, exploring new places, or getting lost in a good tech podcast."</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="grid-3">
+        <div class="skill-box card">HTML &amp; CSS</div>
+        <div class="skill-box card">JavaScript</div>
+        <div class="skill-box card">C++</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="projects-grid">
+        <article class="project fade-up">
+          <h4>Project One</h4>
+            <div class="gallery-grid"><img src="portfolio.jpg" alt="Portfolio">  </div>
+          <p class="muted">A Portfolio Website showcasing my skills and projects.</p>
+        </article>
+        <article class="project fade-up">
+          <h4>Project Two</h4>
+          <p class="muted">COMING SOON</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="img1.jpg" onclick="openLightbox(this)">
+        <img src="img2.jpg" onclick="openLightbox(this)">
+        <img src="img3.jpg" onclick="openLightbox(this)">
+        <img src="img4.jpg" onclick="openLightbox(this)">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <div class="card contact-card">
+        <div class="left">
+          <p class="muted">Email</p>
+          <p><a href="mailto:pujarihannah@gmail.com">pujarihannah@gmail.com</a></p>
+
+          <p class="muted">LinkedIn</p>
+          <p><a href="https://www.linkedin.com/in/hannah-pujari-18320039b/" target="_blank">linkedin.com/in/hannah-pujari</a></p>
+        </div>
+
+        <form class="right" onsubmit="event.preventDefault();alert('Message sent!');">
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Your email" required>
+          <textarea placeholder="Message"></textarea>
+          <button class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p class="muted">© 2025 Hannah Pujari — Built with care</p>
+    </footer>
+  </main>
+
+  <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <div id="lightbox">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
